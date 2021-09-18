@@ -1,0 +1,819 @@
+/* 
+#################################################### mobile first
+####################################################
+ */
+
+
+/* ## fonts ## */
+
+
+/* web fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Quicksand:wght@300;400;500;600;700&display=swap');
+h1,
+h2,
+h3,
+p,
+span,
+a,
+div {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+
+.logo h1 {
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+
+/* icon fonts */
+
+@font-face {
+    font-family: "iconfont";
+    /* Project id 2799768 */
+    src: url('icon-fonts/iconfont.woff2') format('woff2'), url('icon-fonts/iconfont.woff') format('woff'), url('icon-fonts/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-language:before {
+    content: "\e85f";
+}
+
+.icon-search:before {
+    content: "\e8d6";
+}
+
+.icon-fork:before {
+    content: "\e61b";
+}
+
+.icon-hamburger:before {
+    content: "\e976";
+}
+
+.icon-triangle:before {
+    content: "\e6bd";
+}
+
+.icon-chevron-right:before {
+    content: "\e630";
+}
+
+.icon-chevron-left:before {
+    content: "\e603";
+}
+
+.icon-chevron-up:before {
+    content: "\e62c";
+}
+
+.icon-chevron-down:before {
+    content: "\e610";
+}
+
+.icon-xiaohongshu:before {
+    content: "\e614";
+}
+
+.icon-linkedin:before {
+    content: "\e87d";
+}
+
+.icon-instagram:before {
+    content: "\e87f";
+}
+
+
+/* default styles */
+
+
+/* global styles */
+
+* {
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* homepage styles */
+
+header,
+header nav>ul,
+main,
+footer {
+    width: 100vw;
+    max-width: 767px;
+}
+
+#carousel {
+    display: none;
+}
+
+header {
+    height: 80px;
+    line-height: 80px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 2px 6px #000;
+}
+
+header a {
+    display: block;
+}
+
+header,
+header a,
+footer a,
+footer {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header .logo {
+    line-height: 80px;
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* nav styles */
+
+header nav {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header nav #menu {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: -100vw;
+    top: 0;
+    z-index: 5;
+    background-color: #000;
+    transition: left 1s;
+}
+
+header nav #menu #closeMenuBtn {
+    position: absolute;
+    top: 0;
+    left: 85%;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+}
+
+header nav #menu #closeMenuBtn .iconfont {
+    font-size: 2rem;
+}
+
+header nav #menu ul {
+    width: 85%;
+}
+
+header nav #menu>ul>li {
+    border-bottom: 1px solid #fff;
+    position: relative;
+}
+
+header nav #menu ul li a {
+    height: 4rem;
+    padding-left: 2rem;
+    line-height: 4rem;
+}
+
+header nav #menu ul li .active {
+    font-weight: 700;
+}
+
+nav ul li .submenu {
+    width: 100%;
+    overflow: hidden;
+    transition: height 0.5s;
+    height: 0;
+}
+
+nav ul li .submenu li {
+    padding-left: 1rem;
+}
+
+
+/* checkboxes */
+
+#showMenuLabel,
+#toSubMenuLabel1,
+#toSubMenuLabel2,
+#showLangLabel {
+    display: none;
+}
+
+#showMenu,
+#toSubMenu1,
+#toSubMenu2,
+#showLang {
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    top: 0;
+    width: 4rem;
+    height: 4rem;
+}
+
+#showMenu {
+    width: 5rem;
+    height: 5rem;
+    left: 0;
+}
+
+#toSubMenu1,
+#toSubMenu2 {
+    top: -3px;
+    right: 0;
+}
+
+#showLang {
+    width: 3rem;
+    top: 6px;
+    left: 5vw;
+}
+
+#showMenu::after,
+#toSubMenu1::after,
+#toSubMenu2::after,
+#showLang::after {
+    display: block;
+    font-family: "iconfont";
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#showMenu::after {
+    content: "\e976";
+    font-size: 2.5rem;
+}
+
+#toSubMenu1::after,
+#toSubMenu2::after {
+    content: "\e630";
+    font-size: 1.5rem;
+}
+
+#showLang::after {
+    content: "\e6bd";
+}
+
+#showMenu:checked+#menu {
+    left: 0;
+}
+
+#toSubMenu1:checked::after,
+#toSubMenu2:checked::after {
+    content: "\e610";
+}
+
+#toSubMenu1:checked+.submenu {
+    height: 8rem;
+}
+
+#toSubMenu2:checked+.submenu {
+    height: 12rem;
+}
+
+#showLang:checked+#chinese {
+    height: 40px;
+}
+
+
+/* end nav styles */
+
+header .language {
+    position: absolute;
+    width: 15vw;
+    height: 80px;
+    line-height: 80px;
+    top: 0;
+    right: 10%;
+}
+
+header .language a {
+    background-color: #000;
+    text-align: center;
+}
+
+header .language #english {
+    text-align: left;
+    padding: 0 0.5rem;
+}
+
+header .language #chinese {
+    overflow: hidden;
+    line-height: 40px;
+    height: 0;
+    width: 100%;
+    transition: height 0.5s;
+}
+
+header #search {
+    position: absolute;
+    top: 0;
+    right: 0%;
+    height: 80px;
+    width: 10vw;
+    text-align: center;
+}
+
+header #search i {
+    display: block;
+}
+
+header #searchBox {
+    overflow: hidden;
+    width: 100vw;
+    height: 0;
+    background-color: #000;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    transition: height 1s;
+}
+
+header #searchBox input,
+header #searchBox #searchBtn {
+    display: block;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 3px;
+    margin: 20px auto;
+}
+
+header #searchBox input {
+    height: 40px;
+    padding: 1rem;
+    width: 80%;
+}
+
+header #searchBox #searchBtn {
+    color: #fff;
+    background-color: #000;
+    border-color: #fff;
+    text-transform: uppercase;
+    height: 30px;
+}
+
+
+/* end header */
+
+
+/* start main */
+
+main {
+    overflow: hidden;
+    height: auto;
+    text-align: center;
+    margin-top: 80px;
+}
+
+#goToTop {
+    position: fixed;
+    right: 1%;
+    bottom: 5%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#goToTop .iconfont {
+    color: #999;
+    font-size: 1.5rem;
+}
+
+main section>article {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+}
+
+main section>article h1 a {
+    cursor: pointer;
+}
+
+main section>article .images {
+    width: 700vw;
+    transform: translateX(-100vw);
+}
+
+main section>article p {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+main section>article .images li {
+    width: 100vw;
+    height: 100%;
+    float: left;
+}
+
+main section>article .images li img {
+    width: 80%;
+}
+
+main section>article .imgPages {
+    width: 100%;
+    align-self: center;
+    margin: 1rem;
+}
+
+main section>article .imgPages li {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+main section>article .imgPages li.current {
+    background-color: #000;
+}
+
+main section>article .see-details a {
+    padding: 0.2rem 0.5rem;
+    border: 1px solid #000;
+    color: #000;
+}
+
+
+/* end main */
+
+
+/* start footer */
+
+footer {
+    background-color: #000;
+    text-align: center;
+    box-shadow: inset 0px 6px 6px -3px #fff;
+    overflow: hidden;
+}
+
+footer .logo {
+    margin: 2rem auto;
+}
+
+footer .container .follow-me,
+footer .container .contact,
+footer .container nav {
+    margin: 1.5rem 0;
+}
+
+footer .container .follow-me div {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container .follow-me .iconfont {
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
+footer .container .follow-me .icon-xiaohongshu {
+    font-size: 1.6rem;
+}
+
+footer .container a {
+    display: block;
+    font-size: 0.8rem;
+    margin: 0.5rem;
+}
+
+footer .container .contact a {
+    text-transform: none;
+}
+
+footer .container nav ul li {
+    margin: 0.8rem;
+}
+
+footer .copyright {
+    border-top: 1px solid #fff;
+    padding: 1rem;
+}
+
+footer .copyright p {
+    text-transform: none;
+    font-size: 0.8rem;
+}
+
+
+/* end footer */
+
+
+/* ######################################################home tablet styles ######################################################
+*/
+
+@media screen and (min-width:768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    p,
+    a {
+        font-size: 1.3rem;
+    }
+    header,
+    header nav>ul,
+    main,
+    footer {
+        width: 100vw;
+        max-width: 1023px;
+    }
+    /* start header */
+    header {
+        height: 200px;
+        position: static;
+    }
+    header .logo {
+        height: 120px;
+        line-height: 120px;
+    }
+    header #showMenu,
+    header nav #menu #closeMenuBtn {
+        display: none;
+    }
+    header nav {
+        width: 100%;
+        margin-top: 120px;
+        height: 80px;
+    }
+    header nav #menu {
+        left: 0;
+        height: 100%;
+        transition: none;
+    }
+    header nav #menu>ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    header nav #menu ul li {
+        border: none;
+    }
+    header nav #menu ul li a {
+        padding-left: 0;
+    }
+    header nav #menu ul li .submenu {
+        width: 0;
+        background-color: #000;
+        position: absolute;
+        top: 4rem;
+    }
+    header nav #menu ul li .submenu li {
+        display: inline-block;
+        padding-left: 0;
+        padding-right: 2rem;
+    }
+    header nav #menu ul li .submenu li a {
+        font-size: 1rem;
+    }
+    #toSubMenu1,
+    #toSubMenu2 {
+        width: 2rem;
+        height: 2rem;
+        top: 13px;
+        right: -2rem;
+    }
+    #showLang {
+        top: 26px;
+        left: 3vw;
+    }
+    #toSubMenu1:checked+.submenu,
+    #toSubMenu2:checked+.submenu {
+        width: 100vw;
+        height: 4rem;
+    }
+    header nav #menu ul li a.active,
+    footer .container nav a.active {
+        font-weight: normal;
+        border-bottom: 2px solid #fff;
+    }
+    header .language {
+        height: 120px;
+    }
+    header .language #english {
+        height: 60px;
+    }
+    header .language #english {
+        margin-top: 30px;
+        line-height: 60px;
+    }
+    header .language #chinese {
+        line-height: 40px;
+        text-align: left;
+        padding-left: 0.8rem;
+    }
+    header #search {
+        height: 120px;
+        line-height: 120px;
+    }
+    header #search .iconfont {
+        font-size: 1.5rem;
+    }
+    header #searchBox {
+        top: 200px;
+    }
+    /* end header */
+    /* start main */
+    main {
+        margin-top: 0;
+    }
+    main #goToTop {
+        right: 3%;
+        bottom: 3%;
+    }
+    main #goToTop .iconfont {
+        font-size: 2rem;
+    }
+    /* end main */
+    /* start footer */
+    footer .container {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+    }
+    footer .container .follow-me {
+        order: 1;
+    }
+    footer .container nav {
+        order: 2
+    }
+    footer .container .contact {
+        order: 3;
+    }
+    footer .container nav ul li {
+        margin-top: 0;
+    }
+    footer .container a {
+        font-size: 1rem;
+    }
+    footer .container nav a {
+        display: inline;
+    }
+    /* end footer */
+}
+
+
+/* ###################################################### start homepage desktop screen ######################################################
+*/
+
+@media screen and (min-width:1024px) {
+    header,
+    main,
+    footer {
+        width: 100vw;
+        max-width: 2920px;
+    }
+    main #goToTop .iconfont {
+        font-size: 3rem;
+    }
+    .scroll-up {
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .scroll-up .logo,
+    .scroll-up nav,
+    .scroll-up nav #menu,
+    .scroll-up nav #menu>ul,
+    .scroll-up .language,
+    .scroll-up .language #english,
+    .scroll-up #search {
+        width: auto;
+        margin: 0;
+        height: 80px;
+        line-height: 80px;
+    }
+    .scroll-up nav,
+    .scroll-up nav #menu,
+    .scroll-up .language,
+    .scroll-up #search {
+        position: static;
+    }
+    .scroll-up .language {
+        position: relative;
+    }
+    .scroll-up .logo a::after {
+        content: "LZ";
+        display: block;
+        font-family: 'Ibarra Real Nova', serif;
+        font-size: 3rem;
+        width: 80px;
+        height: 80px;
+    }
+    .scroll-up .logo h1 {
+        display: none;
+    }
+    .scroll-up nav #menu ul {
+        justify-content: start;
+        align-items: center;
+    }
+    .scroll-up nav #menu ul li {
+        margin: 0 2rem;
+    }
+    .scroll-up nav #menu .submenu {
+        z-index: 5;
+    }
+    .scroll-up nav #menu .submenu li {
+        margin: 0;
+    }
+    .scroll-up .language {
+        right: 0;
+    }
+    .scroll-up .language #chinese {
+        width: 6rem;
+    }
+    .scroll-up #showLang {
+        top: 5px;
+    }
+    .scroll-up #search #searchBox {
+        top: 80px;
+    }
+    /* carousel */
+    #carousel {
+        display: block;
+        width: 100vw;
+        max-width: 1920px;
+    }
+    #carousel,
+    main section article {
+        height: 100vh;
+        min-height: 100vh;
+    }
+    main section article {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 10% 1fr 10%;
+    }
+    main section article h1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    main section article h1+p {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    main section article .images {
+        width: 100%;
+        grid-column: 2/3;
+        grid-row: 1/4;
+    }
+    main section article .images li {
+        width: 100%;
+    }
+    main section article .images li:nth-child(n+2) {
+        display: none;
+    }
+    main section article .images li a img {
+        height: 90vh;
+        width: auto;
+    }
+    main section article .imgPages {
+        display: none;
+    }
+    main section article .see-details {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+}
