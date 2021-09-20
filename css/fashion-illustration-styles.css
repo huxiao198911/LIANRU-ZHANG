@@ -1,0 +1,54 @@
+/* ##### mobile first ##### */
+
+.main-fashion-illustration article:nth-child(2n+1) {
+    background-color: #F7F5F5;
+}
+
+.main-fashion-illustration .designs h1 {
+    margin: 2rem;
+}
+
+.main-fashion-illustration .designs h2,
+.main-fashion-illustration .garments p {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.main-fashion-illustration .designs article {
+    width: 100vw;
+    margin: 2.5rem 0;
+    padding: 1.5rem 0;
+}
+
+.main-fashion-illustration article a {
+    display: block;
+    width: 100vw;
+    height: auto;
+}
+
+.main-fashion-illustration article a img {
+    height: auto;
+    width: 80vw;
+    margin: 1rem auto;
+}
+
+.main-fashion-illustration .designs article p span {
+    display: block;
+    margin: 1rem 0;
+}
+
+.main-fashion-illustration .garments p {
+    margin: 1rem auto;
+}
+
+.main-fashion-illustration .garments p span {
+    display: block;
+    margin: 0.5rem;
+}
+
+.main-fashion-illustration .garments p>a {
+    display: inline;
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding: 0.2rem;
+}

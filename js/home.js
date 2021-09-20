@@ -5,13 +5,27 @@ window.addEventListener('load', function() {
     initHeader();
     initHomeMain();
 
-})
+});
 
 function initHomeMain() {
     // object check
     if (!d.querySelector('#carousel')) return false;
     // get all article elements in main 
     const articlesInMain = mainContent.querySelectorAll('article');
+
+
+    // show and hide goToTop arrow
+    window.addEventListener('scroll', function() {
+        //go to top
+        if (this.scrollY >= screenHeight) {
+            goToTop.style.opacity = 1;
+        } else {
+            goToTop.style.opacity = 0;
+        }
+        goToTop.addEventListener('click', function() {
+            window.scroll({ top: 0, behavior: "smooth" })
+        })
+    });
 
     // main articles' background
     for (let i = 0; i < articlesInMain.length; i++) {
@@ -28,7 +42,7 @@ function initHomeMain() {
     const imgPagesInArticle = mainContent.querySelectorAll('.imgPages');
 
     // works only on mobile and tablet
-    if (screenWidth <= 1024) {
+    if (window.innerWidth <= 1024) {
         //loop every ul in articles
         for (let i = 0; i < imgsInArticle.length; i++) {
             //console.log(imgsInArticle[i]);

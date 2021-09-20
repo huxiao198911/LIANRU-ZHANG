@@ -1,0 +1,178 @@
+/* 
+#################################################### mobile first
+####################################################
+ */
+
+
+/* carousel */
+
+#carousel {
+    display: none;
+}
+
+
+/* start main */
+
+main {
+    overflow: hidden;
+    height: auto;
+    text-align: center;
+    margin-top: 80px;
+}
+
+#goToTop {
+    position: fixed;
+    right: 1%;
+    bottom: 5%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#goToTop .iconfont {
+    color: #999;
+    font-size: 1.5rem;
+}
+
+main section>article {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+}
+
+main section>article h1 a {
+    cursor: pointer;
+}
+
+main section>article .images {
+    width: 700vw;
+    transform: translateX(-100vw);
+}
+
+main section>article p {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+main section>article .images li {
+    width: 100vw;
+    height: 100%;
+    float: left;
+}
+
+main section>article .images li img {
+    width: 80%;
+}
+
+main section>article .imgPages {
+    width: 100%;
+    align-self: center;
+    margin: 1rem;
+}
+
+main section>article .imgPages li {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+main section>article .imgPages li.current {
+    background-color: #000;
+}
+
+main section>article .see-details a {
+    padding: 0.2rem 0.5rem;
+    border: 1px solid #000;
+    border-radius: 2px;
+    color: #000;
+}
+
+
+/* end main */
+
+
+/* ######################################################home tablet styles ######################################################
+*/
+
+@media screen and (min-width:768px) {}
+
+
+/* ###################################################### start homepage desktop screen ######################################################
+*/
+
+@media screen and (min-width:1024px) {
+    /* carousel */
+    #carousel {
+        display: block;
+        width: 100vw;
+        max-width: 1920px;
+    }
+    #carousel,
+    main section article {
+        height: 100vh;
+        min-height: 100vh;
+    }
+    main section article {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+    }
+    main section article .images {
+        width: 50vw;
+        transition: none;
+        transform: none;
+    }
+    main section article:nth-child(2n+1) h1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        align-self: end;
+    }
+    main section article:nth-child(2n+1) h1+p {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    main section article:nth-child(2n+1) .images {
+        grid-column: 2/3;
+        grid-row: 1/4;
+    }
+    main section article:nth-child(2n+1) .see-details {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        align-self: start;
+    }
+    main section article:nth-child(2n) h1 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        align-self: end;
+    }
+    main section article:nth-child(2n) h1+p {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    main section article:nth-child(2n) .images {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+    main section article:nth-child(2n) .see-details {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        align-self: start;
+    }
+    main section article .images li {
+        width: 100%;
+    }
+    main section article .images li:nth-child(n+2) {
+        display: none;
+    }
+    main section article .images li a img {
+        height: 80vh;
+        width: auto;
+    }
+    main section article .imgPages {
+        display: none;
+    }
+}

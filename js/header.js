@@ -101,15 +101,6 @@ function initHeader() {
                 //console.log(headerHeight);
                 //console.log(this.scrollY);
             }
-            //go to top
-            if (this.scrollY >= screenHeight) {
-                goToTop.style.opacity = 1;
-            } else {
-                goToTop.style.opacity = 0;
-            }
-            goToTop.addEventListener('click', function() {
-                window.scroll({ top: 0, behavior: "smooth" })
-            })
         });
     }
 }
