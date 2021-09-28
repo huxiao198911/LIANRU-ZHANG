@@ -101,6 +101,10 @@ div {
     font-size: 1rem;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 h1,
 h2 {
     font-size: 1.3rem;
@@ -151,10 +155,13 @@ footer {
 }
 
 header .logo {
+    position: relative;
     line-height: 80px;
     width: 100vw;
     margin: 0 auto;
     text-align: center;
+    z-index: 5;
+    background-color: #000;
 }
 
 
@@ -163,7 +170,7 @@ header .logo {
 header nav {
     height: 100%;
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 0;
 }
 
@@ -173,7 +180,7 @@ header nav #menu {
     position: absolute;
     left: -100vw;
     top: 0;
-    z-index: 5;
+    z-index: 6;
     background-color: #000;
     transition: left 1s;
 }
@@ -251,6 +258,8 @@ nav ul li .submenu li {
     width: 5rem;
     height: 5rem;
     left: 0;
+    top: -20px;
+    z-index: 5;
 }
 
 #toSubMenu1,
@@ -324,6 +333,7 @@ header .language {
     line-height: 80px;
     top: 0;
     right: 10%;
+    z-index: 5;
 }
 
 header .language a {
@@ -340,7 +350,7 @@ header .language #chinese {
     overflow: hidden;
     line-height: 40px;
     height: 0;
-    width: 100%;
+    width: 80%;
     transition: height 0.5s;
 }
 
@@ -351,6 +361,7 @@ header #search {
     height: 80px;
     width: 10vw;
     text-align: center;
+    z-index: 5;
 }
 
 header #search i {
@@ -365,7 +376,7 @@ header #searchBox {
     position: absolute;
     top: 80px;
     right: 0;
-    transition: height 1s;
+    transition: height 0.5s;
 }
 
 header #searchBox input,
@@ -517,7 +528,7 @@ footer .copyright p {
     }
     header nav {
         width: 100%;
-        margin-top: 120px;
+        margin-top: 100px;
         height: 80px;
     }
     header nav #menu {
@@ -698,7 +709,7 @@ footer .copyright p {
         margin: 0 2rem;
     }
     .scroll-up nav #menu .submenu {
-        z-index: 5;
+        z-index: 6;
     }
     .scroll-up nav #menu .submenu li {
         margin: 0;

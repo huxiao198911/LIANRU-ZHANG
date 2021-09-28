@@ -1,9 +1,7 @@
 // variables
 const d = document;
 const header = d.querySelector('#header');
-const carousel = d.querySelector('#carousel');
 const goToTop = d.querySelector('#goToTop');
-const mainContent = d.querySelector('#mainContent');
 const footer = d.querySelector('#footer');
 
 let screenHeight = window.innerHeight;
@@ -11,8 +9,7 @@ let screenHeight = window.innerHeight;
 let screenWidth = window.innerWidth;
 //console.log(screenWidth);
 let headerHeight = header.offsetHeight;
-let carouselHeight = carousel.offsetHeight;
-let mainContentHeight = mainContent.offsetHeight;
+//console.log(headerHeight);
 let footerHeight = footer.offsetHeight;
 
 function initHeader() {
@@ -91,8 +88,6 @@ function initHeader() {
                 header.classList.add('scroll-up');
                 headerHeight = header.offsetHeight;
                 showSubmenu();
-                //console.log(headerHeight);
-
                 //console.log(this.scrollY);
             } else if (this.scrollY < headerHeight) {
                 header.classList.remove('scroll-up');
