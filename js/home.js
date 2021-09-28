@@ -113,7 +113,7 @@ function initHomeMain() {
 
             // click event
             //swap image function
-            function swapImg(ele, target, callback) {
+            function swapImg(ele, target) {
                 ele.style.transition = 'transform 0.3s';
                 ele.style.transform = 'translateX(-' + target + 'px)';
             }
@@ -197,13 +197,11 @@ function initHomeMain() {
             imgsInArticle[indexForUl].addEventListener('touchmove', touchmoveHandler);
             imgsInArticle[indexForUl].addEventListener('touchend', touchendHandler);
 
-
-
-
-
             preloadedImages(imgsInArticle[indexForUl]);
         }
     } else {
+        const carousel = d.querySelector('#carousel');
+
         window.addEventListener('scroll', function() {
             if (this.scrollY >= headerHeight) {
                 mainContent.style.marginTop = screenHeight - headerHeight + 'px';
@@ -212,15 +210,40 @@ function initHomeMain() {
             }
         });
 
+        // mousewheel event
+
+
+
         // Desktop homepage carousel
-        const carousel = d.querySelector('#carousel');
         const sliderImages = d.querySelector('#sliderImages');
         const sliderPagination = d.querySelector('#pagination');
         const sliderArrows = d.querySelector('#arrows');
         const slideToLeft = sliderArrows.children[0];
         const slideToRight = sliderArrows.children[1];
 
-        let counter = 0;
+        let index = 0;
+        let arrowClicks = 0;
+        let circle = 0;
+
+        function activeCircle(obj, index) {
+            for (let i = 0; i < obj.length; i++) {
+                obj[i].classList.remove('current');
+            }
+            obj[index].classList.add('current');
+        }
+
+        function animate(obj, target) {
+            clearInterval(obj.timeId);
+            obj.timeId = setInterval(function() {
+                let steps = (target - obj.offsetLeft) / 10;
+                steps = steps > 0 ? Math.ceil(steps) : Math.floor(steps);
+                if (obj.offsetLeft > target) {
+                    clearInterval(obj.timer);
+                }
+                obj.style.left = obj.offsetLeft + steps + 'px';
+            }, 15)
+
+        }
         //Create li elements in sliderPagination
         for (let i = 0; i < sliderImages.children.length; i++) {
             const page = d.createElement('li');
@@ -231,42 +254,38 @@ function initHomeMain() {
         const pageLis = sliderPagination.children;
         for (page of pageLis) {
             page.addEventListener('click', function() {
-                let index = parseInt(this.getAttribute('data-index'));
-                for (let i = 0; i < pageLis.length; i++) {
-                    pageLis[i].classList.remove('current');
-                }
-                this.classList.add('current');
-                sliderImages.style.transform = 'translatex(-' + screenWidth * (index + 1) + 'px)';
-                sliderImages.style.transition = 'transform 1s';
-                counter = index;
+                index = parseInt(this.getAttribute('data-index'));
+                arrowClicks = index;
+                circle = index;
+                activeCircle(pageLis, index);
+                animate(sliderImages, -(screenWidth * index));
             });
         }
 
         // add two more images in sliderImages
         const afterLastImg = sliderImages.firstElementChild.cloneNode(true);
-        const beforeFirstImg = sliderImages.lastElementChild.cloneNode(true);
         sliderImages.appendChild(afterLastImg);
-        sliderImages.insertBefore(beforeFirstImg, sliderImages.firstElementChild);
 
-        let timesToLeft = 0;
-        let timesToRight = 0;
+
         let hasTransitioned = true;
         let timer;
 
         function sliderGoLeft() {
             clearTimeout(timer);
-            if (hasTransitioned == true) {
+            if (hasTransitioned) {
                 hasTransitioned = false;
-                if (timesToLeft > sliderImages.children.length - 3) {
-                    timesToLeft = 0;
-                    sliderImages.style.transition = 'none';
-                    sliderImages.style.transform = 'translateX(-' + (timesToLeft + 1) * screenWidth + 'px)';
-                } else {
-                    timesToLeft++;
-                    console.log("timesToLeft:" + timesToLeft);
-                    sliderImages.style.transition = 'transform 1s';
-                    sliderImages.style.transform = 'translateX(-' + (timesToLeft + 1) * screenWidth + 'px)';
+                if (arrowClicks == sliderImages.children.length - 1) {
+                    arrowClicks = 0;
+                    sliderImages.style.left = 0;
                 }
+                arrowClicks++;
+                animate(sliderImages, -(screenWidth * arrowClicks));
+
+                circle++;
+                if (circle == pageLis.length) {
+                    circle = 0;
+                }
+                activeCircle(pageLis, circle);
             }
             timer = setTimeout(() => {
                 hasTransitioned = true;
@@ -275,18 +294,17 @@ function initHomeMain() {
 
         function sliderGoRight() {
             clearTimeout(timer);
-            if (hasTransitioned == true) {
+            if (hasTransitioned) {
                 hasTransitioned = false;
-                if (timesToRight < 0) {
-                    timesToRight = sliderImages.children.length - 3;
-                    sliderImages.style.transition = 'none';
-                    sliderImages.style.transform = 'translateX(-' + (timesToRight + 1) * screenWidth + 'px)';
-                } else {
-                    timesToRight--;
-                    console.log("timesToRight" + timesToRight);
-                    sliderImages.style.transition = 'transform 1s';
-                    sliderImages.style.transform = 'translateX(-' + (timesToRight + 1) * screenWidth + 'px)';
+                if (arrowClicks == 0) {
+                    arrowClicks = sliderImages.children.length - 1;
+                    sliderImages.style.left = -arrowClicks * screenWidth + 'px';
                 }
+                arrowClicks--;
+                animate(sliderImages, -(screenWidth * arrowClicks));
+                circle--;
+                circle = circle < 0 ? pageLis.length - 1 : circle;
+                activeCircle(pageLis, circle);
             }
             timer = setTimeout(() => {
                 hasTransitioned = true;

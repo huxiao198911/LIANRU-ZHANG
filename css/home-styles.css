@@ -122,7 +122,6 @@ main section>article .see-details a {
     #carousel #sliderImages {
         width: 600vw;
         height: 100%;
-        transform: translateX(-100vw);
         position: absolute;
         top: 0;
         left: 0;
