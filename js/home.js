@@ -15,19 +15,6 @@ function initHomeMain() {
     const mainContent = d.querySelector('#mainContent');
     const articlesInMain = mainContent.querySelectorAll('article');
 
-    // show and hide goToTop arrow
-    window.addEventListener('scroll', function() {
-        //go to top
-        if (this.scrollY >= screenHeight) {
-            goToTop.style.opacity = 1;
-        } else {
-            goToTop.style.opacity = 0;
-        }
-        goToTop.addEventListener('click', function() {
-            window.scroll({ top: 0, behavior: "smooth" })
-        })
-    });
-
     // main articles' background
     for (let i = 0; i < articlesInMain.length; i++) {
         if (i % 2 === 0) {

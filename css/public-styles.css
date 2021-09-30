@@ -402,19 +402,6 @@ header #searchBox #searchBtn {
     height: 30px;
 }
 
-
-/* end header */
-
-
-/* start main */
-
-main {
-    overflow: hidden;
-    height: auto;
-    text-align: center;
-    margin-top: 80px;
-}
-
 #goToTop {
     position: fixed;
     right: 1%;
@@ -426,6 +413,19 @@ main {
 #goToTop .iconfont {
     color: #999;
     font-size: 1.5rem;
+}
+
+
+/* end header */
+
+
+/* start main */
+
+main {
+    overflow: hidden;
+    height: auto;
+    text-align: center;
+    margin-top: 80px;
 }
 
 

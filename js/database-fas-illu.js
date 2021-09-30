@@ -3,10 +3,10 @@ const imgDirHead = ['../../images/fashion/design/', '../../images/fashion/garmen
 // ##### Fashion - Designs works #####
 const designWorks = [];
 let designWorkArticle = {};
-designWorks.push(designWorkArticle);
+//designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Title: Black-red Cheongsam with miniskirt',
+    title: 'Black-red Cheongsam with miniskirt',
     imgDir: imgDirHead[0] + 'black-red-mini-skirt-cheongsam.jpg',
     creativeDuration: 'Date: May 16-22 2021',
     tool: 'Tool: ' + workTool[0]
@@ -14,7 +14,7 @@ designWorkArticle = {
 designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Title: Dark red coat with yellow-purple strip',
+    title: 'Dark red coat with yellow-purple strip',
     imgDir: imgDirHead[0] + 'dark-red-yellow-strip-coat.jpg',
     creativeDuration: 'Date: December 12-14 2020',
     tool: 'Tool: ' + workTool[0]
@@ -22,7 +22,7 @@ designWorkArticle = {
 designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Title: Ruffled prom dress in purple',
+    title: 'Ruffled prom dress in purple',
     imgDir: imgDirHead[0] + 'purple-ruffle-prom-dress.jpg',
     creativeDuration: 'Date: August 29-30 2020',
     tool: 'Tool: ' + workTool[0]
@@ -30,7 +30,7 @@ designWorkArticle = {
 designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Title: Sisterhood outfit in yellow',
+    title: 'Sisterhood outfit in yellow',
     imgDir: imgDirHead[0] + 'yellow-black-white-suit-dress.jpg',
     creativeDuration: 'Date: May 22-24 2020',
     tool: 'Tool: ' + workTool[0]
@@ -38,7 +38,7 @@ designWorkArticle = {
 designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Title: Purple one piece dress with Chinese style',
+    title: 'Purple one piece dress with Chinese style',
     imgDir: imgDirHead[0] + 'purple-chinese-one-piece-dress.jpg',
     creativeDuration: 'Date: May 12-13 2020',
     tool: 'Tool: ' + workTool[0]
@@ -46,15 +46,15 @@ designWorkArticle = {
 designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Title: pink-plastic-transparent-raincoat-umbrella',
-    imgDir: imgDirHead[0] + 'Pink lady with raincoat.jpg',
+    title: 'Pink lady with raincoat',
+    imgDir: imgDirHead[0] + 'pink-plastic-transparent-raincoat-umbrella.jpg',
     creativeDuration: 'Date: May 01-03 2020',
     tool: 'Tool: ' + workTool[0]
 }
 designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Title: Lady in yellow clown suit',
+    title: 'Lady in yellow clown suit',
     imgDir: imgDirHead[0] + 'yellow-clown-suit-buff-sleeve.jpg',
     creativeDuration: 'Date: April 18-29 2020',
     tool: 'Tool: ' + workTool[0]
@@ -62,15 +62,15 @@ designWorkArticle = {
 designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Title: Dance in blue dress',
-    imgDir: imgDirHead[0] + 'blue-dress-fluffy-sleevee.jpg',
+    title: 'Dance in blue dress',
+    imgDir: imgDirHead[0] + 'blue-dress-fluffy-sleeve.jpg',
     creativeDuration: 'Date: April 18-21 2020',
     tool: 'Tool: ' + workTool[0]
 }
 designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Title: Green black princess dress',
+    title: 'Green black princess dress',
     imgDir: imgDirHead[0] + 'green-black-princess-dress.jpg',
     creativeDuration: 'Date: April 16 2020',
     tool: 'Tool: ' + workTool[0]
@@ -78,14 +78,23 @@ designWorkArticle = {
 designWorks.push(designWorkArticle);
 
 //console.log(designWorks);
+// ##### Fashion - Garments works #####
+const garmentWorks = [];
+let garmentWorkArticle = {};
 
+garmentWorkArticle = {
+    title: 'Blue dress',
+    imgDir: imgDirHead[1] + 'blue-dress/blue-dress.jpg',
+    story: '<p>I plan to turn my fashion design drawing into the real clothes. This is the first project.</p><p><span>Want to know the processes?</span><br><a href="#">Read here</a></p>'
+}
+garmentWorks.push(garmentWorkArticle);
 // ##### Illustration - Gufeng - Chinese-style works #####
 const gufengWorks = [];
 let gufengWorkArticle = {};
-gufengWorks.push(gufengWorkArticle);
+//gufengWorks.push(gufengWorkArticle);
 
 gufengWorkArticle = {
-    title: 'Title: Moonlight',
+    title: 'Moonlight',
     imgDir: imgDirHead[2] + 'gufeng-red-dress.jpg',
     creativeDuration: 'Date: March 18 2021',
     tool: 'Tool: ' + workTool[0]
@@ -93,7 +102,7 @@ gufengWorkArticle = {
 gufengWorks.push(gufengWorkArticle);
 
 gufengWorkArticle = {
-    title: 'Title: Girl in red Chinese dress',
+    title: 'Girl in red Chinese dress',
     imgDir: imgDirHead[2] + 'gufeng-moonlight.jpg',
     creativeDuration: 'Date: May 06 2021',
     tool: 'Tool: ' + workTool[0]
@@ -101,7 +110,7 @@ gufengWorkArticle = {
 gufengWorks.push(gufengWorkArticle);
 
 gufengWorkArticle = {
-    title: 'Title: Blue series - Spring',
+    title: 'Blue series - Spring',
     imgDir: imgDirHead[2] + 'gufeng-blue-series-spring.jpg',
     creativeDuration: 'Date: March 17-21 2020',
     tool: 'Tool: ' + workTool[0]
@@ -109,7 +118,7 @@ gufengWorkArticle = {
 gufengWorks.push(gufengWorkArticle);
 
 gufengWorkArticle = {
-    title: 'Title: Blue series - Dance',
+    title: 'Blue series - Dance',
     imgDir: imgDirHead[2] + 'gufeng-blue-series-dance.jpg',
     creativeDuration: 'Date: March 08 2020',
     tool: 'Tool: ' + workTool[0]
@@ -117,7 +126,7 @@ gufengWorkArticle = {
 gufengWorks.push(gufengWorkArticle);
 
 gufengWorkArticle = {
-    title: 'Title: Blue series - Fan',
+    title: 'Blue series - Fan',
     imgDir: imgDirHead[2] + 'gufeng-blue-series-fan.jpg',
     creativeDuration: 'Date: March 02 2020',
     tool: 'Tool: ' + workTool[0]
@@ -128,10 +137,10 @@ gufengWorks.push(gufengWorkArticle);
 // ##### Illustration - Life story  works #####
 const lifeStoryWorks = [];
 let lifeStoryWorkArticle = {};
-lifeStoryWorks.push(lifeStoryWorkArticle);
+//lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Party is not my thing',
+    title: 'Party is not my thing',
     imgDir: imgDirHead[3] + 'party-lonely.jpg',
     creativeDuration: 'Date: June 10 2021',
     tool: 'Tool: ' + workTool[2],
@@ -140,8 +149,8 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Kick Boxing',
-    imgDir: imgDirHead[3] + 'sports-kick-boxing.jpg',
+    title: 'Kick Boxing',
+    imgDir: imgDirHead[3] + 'sports-kick-boxing/sports-kick-boxing-01.jpg',
     creativeDuration: 'Date: June 10 2021',
     tool: 'Tool: ' + workTool[2],
     story: '<h2>Story: </h2><p>I was doing kick-boxing with other 2 girls. We are not tall, so coach asked us to stand on the step and then practice the punches with him one by one. I told my friend, with the same height, she can first grab coach \'s neck， and kick him hardly direct to his stomach. Coach: \'why you are such a violent girl?\'</p>'
@@ -149,7 +158,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Being the Queen',
+    title: 'Being the Queen',
     imgDir: imgDirHead[3] + 'queen.jpg',
     creativeDuration: 'Date: June 10 2021',
     tool: 'Tool: ' + workTool[2],
@@ -158,7 +167,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Urban trail city run',
+    title: 'Urban trail city run',
     imgDir: imgDirHead[3] + 'city-run.jpg',
     creativeDuration: 'Date: July 24 2018',
     tool: 'Tool: ' + workTool[2],
@@ -167,7 +176,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Big face',
+    title: 'Big face',
     imgDir: imgDirHead[3] + 'big-face.jpg',
     creativeDuration: 'Date: July 17 2018',
     tool: 'Tool: ' + workTool[1],
@@ -176,7 +185,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Guy VS lady reacts after my hair cut',
+    title: 'Guy VS lady reacts after my hair cut',
     imgDir: imgDirHead[3] + 'hair-cut.jpg',
     creativeDuration: 'Date: June 22 2018',
     tool: 'Tool: ' + workTool[2],
@@ -185,7 +194,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: I want food!',
+    title: 'I want food!',
     imgDir: imgDirHead[3] + 'sports-food.jpg',
     creativeDuration: 'Date: May 01 2018',
     tool: 'Tool: ' + workTool[2],
@@ -194,7 +203,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Computer crushes',
+    title: 'Computer crushes',
     imgDir: imgDirHead[3] + 'collapse.jpg',
     creativeDuration: 'Date: April 11 2018',
     tool: 'Tool: ' + workTool[2],
@@ -203,7 +212,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Computer crushes',
+    title: 'Computer crushes',
     imgDir: imgDirHead[3] + 'collapse.jpg',
     creativeDuration: 'Date: April 11 2018',
     tool: 'Tool: ' + workTool[2],
@@ -212,7 +221,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Hug',
+    title: 'Hug',
     imgDir: imgDirHead[3] + 'hug.jpg',
     creativeDuration: 'Date: March 26 2018',
     tool: 'Tool: ' + workTool[2],
@@ -221,7 +230,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Friday',
+    title: 'Friday',
     imgDir: imgDirHead[3] + 'friday.jpg',
     creativeDuration: 'Date: March 26 2018',
     tool: 'Tool: ' + workTool[2],
@@ -230,7 +239,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Restart',
+    title: 'Restart',
     imgDir: imgDirHead[3] + 'restart.jpg',
     creativeDuration: 'Date: March 22 2018',
     tool: 'Tool: ' + workTool[2],
@@ -239,7 +248,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Lost My Way',
+    title: 'Lost My Way',
     imgDir: imgDirHead[3] + 'lost-my-way.jpg',
     creativeDuration: 'Date: September 6 2013',
     tool: 'Tool: ' + workTool[2],
@@ -248,7 +257,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Happy Chinese New Year!',
+    title: 'Happy Chinese New Year!',
     imgDir: imgDirHead[3] + 'chinese-new-year.jpg',
     creativeDuration: 'Date: February 08 2013',
     tool: 'Tool: ' + workTool[2],
@@ -257,7 +266,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: I am not in the mood!',
+    title: 'I am not in the mood!',
     imgDir: imgDirHead[3] + 'crazy.jpg',
     creativeDuration: 'Date: February 04 2013',
     tool: 'Tool: ' + workTool[2],
@@ -266,7 +275,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title:  Christmas gift',
+    title: 'Christmas gift',
     imgDir: imgDirHead[3] + 'christmas.jpg',
     creativeDuration: 'Date: December 21 2012',
     tool: 'Tool: ' + workTool[2],
@@ -275,7 +284,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title:  Happy Birthday to myself',
+    title: 'Happy Birthday to myself',
     imgDir: imgDirHead[3] + 'birthday-cake.jpg',
     creativeDuration: 'Date: March 23 2009',
     tool: 'Tool: ' + workTool[2],
@@ -284,7 +293,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Title: Lucky Me',
+    title: 'Lucky Me',
     imgDir: imgDirHead[3] + 'lunch-break-nap.jpg',
     creativeDuration: 'Date: March 23 2009',
     tool: 'Tool: ' + workTool[2],
@@ -298,10 +307,11 @@ lifeStoryWorks.push(lifeStoryWorkArticle);
 // ##### Illustration - Books works #####
 const booksWorks = [];
 let booksWorkArticle = {};
-booksWorks.push(booksWorkArticle);
+//booksWorks.push(booksWorkArticle);
 
 booksWorkArticle = {
-    title: 'Title: Group Benefits from Genomic Instability',
+    title: 'Group Benefits from Genomic Instability',
+    imgDir: imgDirHead[4] + 'covers/book-back-bookmark.jpg',
     creativeDuration: 'Date: June 2020',
     tool: 'Tool: ' + workTool[0],
     story: '<h2>Story: </h2><p>Zheren is one of my best friends. He is a PHD of microbiology. He invited me to draw the cover and bookmark for his PHD book. He is from China and he did his PHD at Leiden university in the Netherlands, so I made some Chinese and Dutch houses to represent the mix culture he had experience. At the back cover, it demos a liftcycle of the bacteria he researched during his PHD.Now he is doing his post PHD at Oxford university. I am very proud of him.</p>'
@@ -309,7 +319,8 @@ booksWorkArticle = {
 booksWorks.push(booksWorkArticle);
 
 booksWorkArticle = {
-    title: 'Title:  Who Would I Be If I Weren\'t Me?',
+    title: 'Who Would I Be If I Weren\'t Me?',
+    imgDir: imgDirHead[4] + 'who-wouldI-be-pic/who-would-I-be-africa.jpg',
     creativeDuration: 'Date:  December 2014-January 2015',
     tool: 'Tool: ' + workTool[2],
     story: '<h2>Story: </h2><p>This book is part of one of sub-projects of ‘Realising Potential’ research for children development at Oxford University. I did the drawings for this book.</p>'
@@ -317,8 +328,9 @@ booksWorkArticle = {
 booksWorks.push(booksWorkArticle);
 
 booksWorkArticle = {
-    title: 'Title: Why the Moon Has Crater',
+    title: 'Why the Moon Has Crater',
     creativeDuration: 'Date: Nov 2012 -Jan 2013',
+    imgDir: imgDirHead[4] + 'why/moon-crater-book.jpg',
     tool: 'Tool: ' + workTool[2],
     story: '<h2>Story: </h2><p>This book is a wedding gift Mark L.Takefman gave to his daughter. He told this story when his daughter was a little girl. It is about how a dragon girl makes the moon having craters.  He invited me to do the illustration parts for this book. Such a lovely gift.</p>'
 }

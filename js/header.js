@@ -98,4 +98,17 @@ function initHeader() {
             }
         });
     }
+
+    // show and hide goToTop arrow
+    window.addEventListener('scroll', function() {
+        //go to top
+        if (this.scrollY >= screenHeight) {
+            goToTop.style.opacity = 1;
+        } else {
+            goToTop.style.opacity = 0;
+        }
+        goToTop.addEventListener('click', function() {
+            window.scroll({ top: 0, behavior: "smooth" })
+        })
+    });
 }
