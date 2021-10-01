@@ -185,7 +185,7 @@ lifeStoryWorkArticle = {
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
-    title: 'Guy VS lady reacts after my hair cut',
+    title: 'Boy VS girl\'s reacts',
     imgDir: imgDirHead[3] + 'hair-cut.jpg',
     creativeDuration: 'Date: June 22 2018',
     tool: 'Tool: ' + workTool[2],
@@ -202,14 +202,6 @@ lifeStoryWorkArticle = {
 }
 lifeStoryWorks.push(lifeStoryWorkArticle);
 
-lifeStoryWorkArticle = {
-    title: 'Computer crushes',
-    imgDir: imgDirHead[3] + 'collapse.jpg',
-    creativeDuration: 'Date: April 11 2018',
-    tool: 'Tool: ' + workTool[2],
-    story: '<h2>Story: </h2><p>There are always some moments, when my work almost done, my laptop suddenly crushed and my work was not saved. I have to start from scratch again.This makes me so frustrated.</p>'
-}
-lifeStoryWorks.push(lifeStoryWorkArticle);
 
 lifeStoryWorkArticle = {
     title: 'Computer crushes',

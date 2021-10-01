@@ -1,5 +1,6 @@
 window.addEventListener('load', function() {
     initHeader();
+    preloadedImages(document.getElementsByTagName('img'));
     if (d.querySelector('#mainFashion')) initFashion();
     if (d.querySelector('#mainIllustration')) initIllustration();
 });
@@ -61,6 +62,9 @@ function createDynamicSections(element, eleArr) {
     section.classList.add(element.class);
     section.innerHTML = '<h1><a href="pages/fashion.html">' + element.firstTitle + '</a><i class="iconfont icon-chevron-right"></i><a href="pages/design.html">' + element.secondTitle + '</a></h1>';
     main.appendChild(section);
+    const artContainer = d.createElement('div');
+    artContainer.classList.add('art-container');
+    section.appendChild(artContainer);
     for (eleObj of eleArr) {
         const article = d.createElement('article');
         if (eleObj.creativeDuration == undefined || eleObj.tool == undefined) {
@@ -68,6 +72,13 @@ function createDynamicSections(element, eleArr) {
         } else {
             article.innerHTML = '<h2>' + eleObj.title + '</h2><a href="#"><img src="' + eleObj.imgDir + '" alt="' + eleObj.title + '"></a><p><span>' + eleObj.creativeDuration + ' </span><span>' + eleObj.tool + '</span></p>';
         }
-        section.appendChild(article);
+        artContainer.appendChild(article);
+    }
+    const imgs = section.querySelectorAll('img');
+    for (img of imgs) {
+        if (img.naturalWidth <= img.naturalHeight) {
+            img.style.width = '100%';
+            img.style.height = 'auto';
+        }
     }
 }
