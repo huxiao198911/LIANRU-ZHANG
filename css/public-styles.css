@@ -16,7 +16,9 @@ h3,
 p,
 span,
 a,
-div {
+div,
+ul,
+li {
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
 }

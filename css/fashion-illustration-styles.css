@@ -1,5 +1,18 @@
 /* ##### mobile first ##### */
 
+.breadcrumbs {
+    width: 100%;
+    text-align: left;
+    padding: 2rem 3rem;
+    background-color: #F7F5F5;
+}
+
+.breadcrumbs a,
+.breadcrumbs span {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
 .main-fashion-illustration {
     width: 100vw;
     max-width: 512px;
@@ -63,15 +76,25 @@
 
 .main-fashion-illustration .garments p>a {
     display: inline;
-    border: 1px solid #000;
-    border-radius: 2px;
+}
+
+.main-fashion-illustration article .iconfont {
+    width: 15px;
+    height: 15px;
     padding: 0.2rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #ccc;
 }
 
 
 /* ##### tablet small ##### */
 
 @media screen and (min-width: 512px) {
+    .breadcrumbs a,
+    .breadcrumbs span {
+        font-size: 1.2rem;
+    }
     .main-fashion-illustration {
         max-width: 768px;
     }
@@ -101,24 +124,39 @@
 /* ##### tablet large ##### */
 
 @media screen and (min-width: 768px) {
+    header+section ul {
+        display: flex;
+        justify-content: center;
+    }
+    header+section ul li {
+        margin: 1.5rem 2rem;
+        padding: 0.5rem 0;
+        font-size: 1.3rem;
+    }
+    header+section ul li.active {
+        border-bottom: 1px solid #000;
+    }
+    .breadcrumbs a,
+    .breadcrumbs span {
+        font-size: 1.3rem;
+    }
     .main-fashion-illustration {
         max-width: 1024px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #F7F5F5;
     }
     .main-fashion-illustration article:nth-of-type(4n+1),
     .main-fashion-illustration article:nth-of-type(4n+2) {
         background-color: transparent;
     }
-    .main-fashion-illustration .art-container {
-        max-width: 1024px;
-        background-color: #F7F5F5;
-    }
-    .main-fashion-illustration .art-container article {
+    .main-fashion-illustration article {
         width: 33.33%;
     }
-    .main-fashion-illustration .art-container article h2 {
+    .main-fashion-illustration article h2 {
         width: 100%;
     }
-    .main-fashion-illustration .art-container article a {
+    .main-fashion-illustration article a {
         width: 28vw;
         height: 28vw;
     }
@@ -128,17 +166,19 @@
 /* ##### desktop ##### */
 
 @media screen and (min-width: 1024px) {
+    .breadcrumbs a,
+    .breadcrumbs span,
+    header+section ul li {
+        font-size: 1.5rem;
+    }
     .main-fashion-illustration {
         max-width: 1920px;
     }
-    .main-fashion-illustration .art-container {
-        max-width: 1920px;
-    }
-    .main-fashion-illustration .art-container article {
+    .main-fashion-illustration article {
         width: 25%;
     }
-    .main-fashion-illustration .art-container article a {
-        width: 22vw;
-        height: 22vw;
+    .main-fashion-illustration article a {
+        width: 20vw;
+        height: 20vw;
     }
 }

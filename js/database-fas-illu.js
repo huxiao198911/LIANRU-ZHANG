@@ -6,7 +6,7 @@ let designWorkArticle = {};
 //designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Black-red Cheongsam with miniskirt',
+    title: 'Cheongsam with miniskirt',
     imgDir: imgDirHead[0] + 'black-red-mini-skirt-cheongsam.jpg',
     creativeDuration: 'Date: May 16-22 2021',
     tool: 'Tool: ' + workTool[0]
@@ -14,7 +14,7 @@ designWorkArticle = {
 designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Dark red coat with yellow-purple strip',
+    title: 'Coat with strip',
     imgDir: imgDirHead[0] + 'dark-red-yellow-strip-coat.jpg',
     creativeDuration: 'Date: December 12-14 2020',
     tool: 'Tool: ' + workTool[0]
@@ -22,7 +22,7 @@ designWorkArticle = {
 designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Ruffled prom dress in purple',
+    title: 'Ruffled prom dress',
     imgDir: imgDirHead[0] + 'purple-ruffle-prom-dress.jpg',
     creativeDuration: 'Date: August 29-30 2020',
     tool: 'Tool: ' + workTool[0]
@@ -30,7 +30,7 @@ designWorkArticle = {
 designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Sisterhood outfit in yellow',
+    title: 'Sisterhood outfit',
     imgDir: imgDirHead[0] + 'yellow-black-white-suit-dress.jpg',
     creativeDuration: 'Date: May 22-24 2020',
     tool: 'Tool: ' + workTool[0]
@@ -38,7 +38,7 @@ designWorkArticle = {
 designWorks.push(designWorkArticle);
 
 designWorkArticle = {
-    title: 'Purple one piece dress with Chinese style',
+    title: 'Chinese style dress',
     imgDir: imgDirHead[0] + 'purple-chinese-one-piece-dress.jpg',
     creativeDuration: 'Date: May 12-13 2020',
     tool: 'Tool: ' + workTool[0]
@@ -83,7 +83,7 @@ const garmentWorks = [];
 let garmentWorkArticle = {};
 
 garmentWorkArticle = {
-    title: 'Blue dress',
+    title: 'Design to garment',
     imgDir: imgDirHead[1] + 'blue-dress/blue-dress.jpg',
     story: '<p>I plan to turn my fashion design drawing into the real clothes. This is the first project.</p><p><span>Want to know the processes?</span><br><a href="#">Read here</a></p>'
 }
